@@ -1,0 +1,249 @@
+/* Variáveis de cores */
+:root {
+  --primary-color: #001242;
+  --secondary-color: #0094c6;
+  --background-color: #eaebed;
+  --text-color: #eaebed;
+  --border-color: #0094c6;
+  --hover-color: #001242;
+  --my-red: #ef476f;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: var(--primary-color);
+  padding: 2rem;
+  color: var(--secondary-color);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+header .title {
+  color: var(--text-color);
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
+header nav ul li {
+  margin: 0 10px;
+}
+
+header nav ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+main {
+  flex: 1;
+
+  align-items: center;
+  gap: 2rem;
+}
+
+main .hero {
+  position: relative;
+  height: 75vh;
+  background-image: url("./mar.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* filter: blur(5px); */
+}
+main .hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+main .hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 50%,
+    var(--primary-color)
+  ); /* Gradiente do transparente no meio até preto no rodapé */
+
+  z-index: 2; /* Camada acima do fundo, mas abaixo do conteúdo */
+}
+
+main .content {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  height: 75vh;
+  z-index: 3;
+}
+
+main .hero h1 {
+  color: var(--text-color);
+  font-size: 2rem;
+}
+
+.informative-section {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding: 2rem;
+  height: 25vh;
+  align-items: center;
+}
+
+.informative-section div {
+  flex: 1;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  padding: 2rem;
+  height: 50vh;
+  align-items: center;
+}
+
+.images {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  gap: 2rem;
+}
+
+.images div {
+  flex: 1;
+  background-color: var(--background-color);
+  height: 20rem;
+  border-radius: 8px;
+  box-shadow: 5px 10px var(--secondary-color);
+  padding: 2rem;
+}
+
+.form-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 800px;
+  width: 100%;
+}
+
+.form-container {
+  background-color: var(--secondary-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+  color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 0;
+  color: var(--primary-color);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+form input {
+  margin-top: 5px;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+form input:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 1rem;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--hover-color);
+}
+
+.link {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
