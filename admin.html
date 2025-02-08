@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proteja a Vida Marinha</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Importando fontes do Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="admin.css" />
+    <script src="admin.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main id="admin-container">
+      <div id="admin-panel">
+        <h1>Cadastro</h1>
+        <form id="user-form" action="#">
+          <label for="name">Nome:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Digite seu nome"
+            required
+          />
+
+          <label for="email">E-mail:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Digite seu e-mail"
+            required
+          />
+
+          <label for="phone">Telefone:</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="(XX) XXXXX-XXXX"
+          />
+
+          <label for="password">Senha:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Digite uma senha segura"
+            required
+          />
+
+          <label for="confirm-password">Confirmar Senha:</label>
+          <input
+            type="password"
+            id="confirm-password"
+            name="confirm-password"
+            placeholder="Confirme sua senha"
+            required
+          />
+          <div class="inline-buttons">
+            <input type="submit" value="Cadastrar" class="btn-dark" />
+            <input type="reset" value="Limpar" class="btn-dark" />
+          </div>
+        </form>
+        <h1>Usuários cadastrados</h1>
+        <div class="inline-buttons">
+          <button id="clear-all" class="btn-dark">Limpar tudo</button>
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Pesquisar"
+            style="align-self: self-end"
+          />
+          <button id="search-button" class="btn-dark">Pesquisar</button>
+        </div>
+        <ul id="users-list">
+          <!-- Users will be dynamically added here -->
+        </ul>
+      </div>
+      <dialog id="modal">
+        <h2>Editar Usuário</h2>
+        <form id="edit-form">
+          <label for="edit-name">Nome:</label>
+          <input type="text" id="edit-name" required />
+
+          <label for="edit-email">E-mail:</label>
+          <input type="email" id="edit-email" required />
+
+          <label for="edit-phone">Telefone:</label>
+          <input type="tel" id="edit-phone" />
+
+          <div class="inline-buttons">
+            <button type="submit" class="btn-dark">Salvar</button>
+            <button type="button" class="btn-dark" id="delete-user">
+              Excluir
+            </button>
+            <button type="button" class="btn-dark" id="close-modal">
+              Fechar
+            </button>
+          </div>
+        </form>
+      </dialog>
+    </main>
+    <footer>
+      <!-- <div class="footer-links">
+        <a href="#">Termos de Uso</a>
+        <a href="#">Política de Privacidade</a>
+        <a href="#">Contato</a>
+      </div> -->
+      <p>&copy; 2024 - Proteja a Vida Marinha</p>
+      <p>Desenvolvido por:</p>
+      <p>
+        Allan Simões Adegas
+        <a
+          href="https://allanadegas.github.io/desenvolvimento-frontend/"
+          target="_blank"
+          >(CV)</a
+        >
+      </p>
+      <p>
+        Caio Felipe da Silva Evangelista
+        <a
+          href="https://caio-evangelista.github.io/Aula-de-front-end/"
+          target="_blank"
+          >(CV)</a
+        >
+      </p>
+      <p>
+        Matheus de Bortoli Pastega
+        <a href="http://pastega.github.io/cv-frontend-exemplo" target="_blank"
+          >(CV)</a
+        >
+      </p>
+    </footer>
+  </body>
+</html>

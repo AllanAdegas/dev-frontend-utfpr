@@ -223,7 +223,7 @@ form label {
   font-weight: bold;
 }
 
-form input {
+input {
   margin-top: 5px;
   padding: 10px;
   border: 1px solid var(--border-color);
@@ -290,6 +290,8 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  align-self: center;
+  justify-self: center;
 }
 
 footer {
@@ -297,8 +299,8 @@ footer {
   color: white;
   text-align: center;
   padding: 10px 0;
-  position: relative;
-  bottom: 0;
+  //position: relative;
+  //bottom: 0;
   width: 100%;
 }
 
@@ -309,4 +311,12 @@ footer a {
 
 footer a:hover {
   font-weight: bold;
+}
+
+.inline-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.inline-buttons input {
 }
